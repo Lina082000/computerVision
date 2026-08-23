@@ -1,0 +1,36 @@
+# Whitelist approach: ignore everything by default, then explicitly un-ignore
+# exactly the files that should end up in the cloned repo. Everything else
+# (data/, kaggle_api_token.txt, the other kaggle_notebooks/*.ipynb, weights/last.pt,
+# __pycache__, ...) stays only on disk here, never tracked/pushed.
+*
+!*/
+
+!/.gitignore
+!/README.md
+
+!/scripts/train_detr.py
+!/scripts/predict_submission.py
+!/scripts/requirements.txt
+
+!/slurm/train_detr.sbatch
+!/slurm/predict_detr.sbatch
+
+!/kaggle_notebooks/compare_models.ipynb
+
+!/report/report_detr.md
+
+!/environment_compare.yml
+
+!/runs/rtdetr-l_640/**
+!/runs/rtdetr-l_1024/**
+!/runs/rtdetr-x_1024/**
+
+# ...except the large intermediate checkpoints (only the final best.pt is tracked)
+runs/*/weights/last.pt
+
+# ...and except this one: 130MB, over GitHub's 100MB hard push limit (shared via OneDrive instead)
+runs/rtdetr-x_1024/weights/best.pt
+
+# performance: don't even walk these large/irrelevant trees
+/data/
+scripts/__pycache__/

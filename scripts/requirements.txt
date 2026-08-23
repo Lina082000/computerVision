@@ -1,0 +1,12 @@
+# Install into a fresh conda/venv env on the cluster. torch is intentionally NOT pinned here —
+# install the CUDA build matching the cluster's driver first, e.g.:
+#   pip install torch --index-url https://download.pytorch.org/whl/cu121
+# (check `nvidia-smi` for the driver's max supported CUDA version), then install the rest below.
+ultralytics
+ensemble-boxes
+torchmetrics
+pycocotools
+pandas
+scikit-learn
+pillow
+matplotlib

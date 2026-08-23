@@ -1,0 +1,50 @@
+{
+  "run_name": "rtdetr-l_640",
+  "model": "rtdetr-l.pt",
+  "imgsz": 640,
+  "epochs": 60,
+  "batch": 4,
+  "wbf_enabled": true,
+  "wbf_iou_thr": 0.5,
+  "n_train_images": 7287,
+  "n_val_images": 1286,
+  "training_time_h": 10.554,
+  "timestamp": "2026-08-11 11:29:23",
+  "environment": {
+    "python": "3.11.15",
+    "platform": "Linux-4.18.0-553.150.1.el8_10.x86_64-x86_64-with-glibc2.28",
+    "torch": "2.5.1+cu121",
+    "cuda_available": true,
+    "cuda_version": "12.1",
+    "gpu_name": "NVIDIA GeForce GTX 1080 Ti",
+    "ultralytics": "8.4.112",
+    "ensemble_boxes": "1.0.9",
+    "torchmetrics": "1.9.0"
+  },
+  "ultralytics_val_metrics": {
+    "precision": 0.4012051123577689,
+    "recall": 0.3258349334607518,
+    "map50": 0.3102549729080364,
+    "map50_95": 0.15703625810880684
+  },
+  "competition_metric": {
+    "map_at_0.4": 0.42037418484687805,
+    "n_val_images": 1286,
+    "per_class_ap": {
+      "Aortic enlargement": 0.7513194680213928,
+      "Atelectasis": 0.26928597688674927,
+      "Calcification": 0.33199048042297363,
+      "Cardiomegaly": 0.6866302490234375,
+      "Consolidation": 0.35852566361427307,
+      "ILD": 0.4695218801498413,
+      "Infiltration": 0.3889307975769043,
+      "Lung Opacity": 0.39971333742141724,
+      "Nodule/Mass": 0.3707736134529114,
+      "Other lesion": 0.14689098298549652,
+      "Pleural effusion": 0.5243062376976013,
+      "Pleural thickening": 0.38660305738449097,
+      "Pneumothorax": 0.35581785440444946,
+      "Pulmonary fibrosis": 0.44492900371551514
+    }
+  }
+}
