@@ -17,8 +17,6 @@
 
 !/kaggle_notebooks/compare_models.ipynb
 
-!/report/report_detr.md
-
 !/environment_compare.yml
 
 !/runs/rtdetr-l_640/**

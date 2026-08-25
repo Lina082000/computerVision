@@ -7,7 +7,7 @@ multiple radiologist annotations per image.
 
 ## Repo contents
 
-This repo only tracks code, results, and the report — **not** the raw dataset or full model
+This repo only tracks code and results — **not** the raw dataset or full model
 checkpoints (see "What's missing" below). Layout:
 
 ```
@@ -34,10 +34,6 @@ kaggle_notebooks/
                             curves) and a written conclusion. Already executed — open it as-is to
                             see the results without re-running anything.
 
-report/
-  report_detr.md           Written report (abstract, method, results, discussion) for the RT-DETR
-                            part of the project.
-
 environment_compare.yml    Minimal conda env to just open and (re-)run compare_models.ipynb
                             (pandas, matplotlib, numpy, jupyterlab, ipykernel — no torch needed).
 
@@ -62,7 +58,7 @@ runs/rtdetr-l_640/submission.csv   the actual file submitted to Kaggle for this 
 | rtdetr-x_1024  | 0.324 | 0.233 | 0.117 | 10.6h |
 
 `rtdetr-l_640` is the strongest model and the one currently submitted to Kaggle:
-**public score 0.375, private score 0.353**. Details/discussion in `report/report_detr.md` and
+**public score 0.375, private score 0.353**. Details/discussion in
 `kaggle_notebooks/compare_models.ipynb`.
 
 ## What's missing (and how to get it)
